@@ -1,56 +1,61 @@
-﻿﻿// Задайте двумерный массив из целых чисел. Найдите среднее арифметическое элементов в каждом столбце.
+﻿/**Задача 58: Задайте две матрицы. Напишите программу, которая будет находить произведение двух матриц.
+Например, даны 2 матрицы:
+2 4 | 3 4
+3 2 | 3 3
+Результирующая матрица будет:
+6 16
+9 6
+**/
 
-int ReadInt(string text)
+const int ROWS = 2;
+const int COLUMNS = 2;
+int[,] NewMatrix = new int[2, 2];
+
+int[,] GetRandomMatrix(int rows, int columns)
 {
-    System.Console.Write(text);
-    return Convert.ToInt32(Console.ReadLine());
-}
+    int[,] matrix = new int[rows, columns];
 
-int[,] FillMatrix(int row, int col, int leftRange, int rightRange)
-{
-    int[,] tempMatrix = new int[row, col];
-    Random rand = new Random();
-
-    for (int i = 0; i < tempMatrix.GetLength(0); i++)
+    for (int i = 0; i < matrix.GetLength(0); i++)
     {
-        for (int j = 0; j < tempMatrix.GetLength(1); j++)
+        for (int j = 0; j < matrix.GetLength(1); j++)
         {
-            tempMatrix[i, j] = rand.Next(leftRange, rightRange + 1);
+            matrix[i, j] = Random.Shared.Next(1, 10);
         }
     }
-    return tempMatrix;
+    return matrix;
 }
 
-void PrintMatrix(int[,] matrixForPrint)
+void PrintMatrix(int[,] matrix)
 {
-    for (int i = 0; i < matrixForPrint.GetLength(0); i++)
+    for (int i = 0; i < matrix.GetLength(0); i++)
     {
-        for (int j = 0; j < matrixForPrint.GetLength(1); j++)
+        for (int j = 0; j < matrix.GetLength(1); j++)
         {
-            System.Console.Write(matrixForPrint[i, j] + "\t");
+            Console.Write($"{matrix[i, j]}\t");
         }
-        System.Console.WriteLine();
+        Console.WriteLine();
     }
 }
 
-int rows = ReadInt("Введите количество строк: ");
-int cols = ReadInt("Введите количество столбцов: ");
-int[,] matrix = FillMatrix(rows, cols, 0, 10);
-PrintMatrix(matrix);
+int[,] Matrix1 = GetRandomMatrix(ROWS, COLUMNS);
+int[,] Matrix2 = GetRandomMatrix(ROWS, COLUMNS);
+Console.WriteLine();
+Console.WriteLine();
+PrintMatrix(Matrix1);
+Console.WriteLine();
+PrintMatrix(Matrix2);
+Console.WriteLine();
 
-double[] sum = new double[cols];
-
-for (int i = 0; i < matrix.GetLength(0); i++)
+void ResultMatrix()
 {
-    for (int j = 0; j < matrix.GetLength(1); j++)
+    for (int i = 0; i < Matrix1.GetLength(0); i++)
     {
-        sum[j] = sum[j] + matrix[i, j];
+        for (int j = 0; j < Matrix1.GetLength(1); j++)
+        {
+            NewMatrix[i, j] = Matrix1[i, j] * Matrix2[i, j];
+        }
     }
 }
-
-System.Console.WriteLine("");
-
-for (int i = 0; i < sum.Length; i++)
-{
-    System.Console.Write(sum[i] / 2 + "\t");
-}
+ResultMatrix();
+Console.WriteLine("Результирующая матрица: ");
+PrintMatrix(NewMatrix);

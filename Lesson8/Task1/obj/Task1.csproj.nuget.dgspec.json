@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Watru\\Desktop\\HoweWork\\Lesson7\\Task1\\Task1.csproj": {}
+    "C:\\Users\\Watru\\Desktop\\HoweWork\\Lesson8\\Task1\\Task1.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Watru\\Desktop\\HoweWork\\Lesson7\\Task1\\Task1.csproj": {
+    "C:\\Users\\Watru\\Desktop\\HoweWork\\Lesson8\\Task1\\Task1.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Watru\\Desktop\\HoweWork\\Lesson7\\Task1\\Task1.csproj",
+        "projectUniqueName": "C:\\Users\\Watru\\Desktop\\HoweWork\\Lesson8\\Task1\\Task1.csproj",
         "projectName": "Task1",
-        "projectPath": "C:\\Users\\Watru\\Desktop\\HoweWork\\Lesson7\\Task1\\Task1.csproj",
+        "projectPath": "C:\\Users\\Watru\\Desktop\\HoweWork\\Lesson8\\Task1\\Task1.csproj",
         "packagesPath": "C:\\Users\\Watru\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Watru\\Desktop\\HoweWork\\Lesson7\\Task1\\obj\\",
+        "outputPath": "C:\\Users\\Watru\\Desktop\\HoweWork\\Lesson8\\Task1\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Watru\\AppData\\Roaming\\NuGet\\NuGet.Config",
