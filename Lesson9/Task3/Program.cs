@@ -30,4 +30,4 @@ int Akkerman(int m, int n)
     }
 }
 
-AkkermanFunction(n,m);
+AkkermanFunction(m,n);
